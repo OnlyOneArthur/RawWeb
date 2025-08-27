@@ -1,12 +1,12 @@
 /* ====== Base / Theme ====== */
 :root{
-  --bg: #0f0f1b;
-  --bg-elev: #1a1a2e;
-  --text: #e6e6e6;
-  --muted: #b0b0b0;
-  --brand: #fddb3a;
-  --brand-600: #e1c022;
-  --surface: #141428;
+  --bg: #1d1e22;
+  --bg-elev: #393f4d;
+  --text: #d4d4dc;
+  --muted: #a5a5aa;
+  --brand: #feda6a;
+  --brand-600: #d4b64a;
+  --surface: #2a2c33;
   --shadow: 0 6px 24px rgba(0,0,0,.3);
   --radius: 12px;
   --focus: 0 0 0 3px rgba(253,219,58,.4);
@@ -174,6 +174,80 @@ a{color:inherit;text-decoration:none}
 .auth-form{display:grid;gap:.8rem}
 .auth-form input{background:#101026;color:var(--text);border:1px solid #2b2b40;border-radius:8px;padding:.8rem}
 .auth-form input:focus{outline:none;box-shadow:var(--focus)}
+
+
+/* ====== Auth nav hover-swap (Login <-> Register) ====== */
+/* ====== Auth nav water-fill + label crossfade ====== */
+.auth-water {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: .4rem .8rem;
+  border-radius: 8px;
+  color: var(--brand);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color .25s ease;
+}
+
+/* Fill animation using ::before */
+.auth-water::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--brand);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
+  z-index: 0;
+}
+
+/* Label container */
+.auth-water .label {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  transition: color .25s ease;
+}
+
+/* Crossfade using ::after */
+.auth-water .label::after {
+  content: attr(data-hover);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: left;
+  color: var(--bg);
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+/* Hover: fill and swap text */
+.auth-water:hover {
+  color: var(--bg); /* fallback text color during transition */
+}
+
+.auth-water:hover::before {
+  transform: scaleX(1);
+}
+
+.auth-water:hover .label {
+  color: transparent;
+}
+
+.auth-water:hover .label::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-water,
+  .auth-water::before,
+  .auth-water .label,
+  .auth-water .label::after {
+    transition: none;
+  }
+}
 
 /* ====== Footer ====== */
 .footer{padding:2rem 5%;color:var(--muted);border-top:1px solid #1f1f33;text-align:center}

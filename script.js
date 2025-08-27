@@ -603,3 +603,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // Optimize scroll perf
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 });
+
+// Water-fill auth button: flip intent on hover/focus
+(() => {
+  const authLink = document.getElementById('auth-link');
+  if (!authLink) return;
+
+  const setIntent = (intent) => {
+    authLink.dataset.auth = intent; // "login" | "register"
+    authLink.setAttribute(
+      'aria-label',
+      intent === 'login' ? 'Login' : 'Register (hover to Login)'
+    );
+  };
+
+  // default to register
+  setIntent('register');
+
+  authLink.addEventListener('mouseenter', () => setIntent('login'));
+  authLink.addEventListener('mouseleave', () => setIntent('register'));
+  authLink.addEventListener('focus',      () => setIntent('login'));
+  authLink.addEventListener('blur',       () => setIntent('register'));
+})();
+

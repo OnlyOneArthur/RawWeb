@@ -76,19 +76,16 @@
         >
         <!-- These sections exist for structure, but auth lives in a unified modal -->
         <a
-          href="#register"
-          class="nav-link open-auth"
-          data-auth="register"
-          data-section="register-section"
-          >Register</a
-        >
-        <a
-          href="#login"
-          class="nav-link open-auth"
-          data-auth="login"
-          data-section="login-section"
-          >Login</a
-        >
+  href="#auth"
+  id="auth-link"
+  class="nav-link open-auth auth-water"
+  data-auth="register"
+  aria-label="Register (hover to Login)"
+>
+  <span class="label" data-label="Register" data-hover="Login">Register</span>
+</a>
+
+
         <button class="nav-link user-pill" id="user-pill" hidden></button>
       </nav>
     </header>
