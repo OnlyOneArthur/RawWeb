@@ -367,5 +367,23 @@ if (document.querySelector("#typed-hero")) {
   });
 }
 
+// Swiper testimonials
+(() => {
+  const el = document.getElementById("t-swiper");
+  if (!el || typeof Swiper === "undefined") return;
+  new Swiper(el, {
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    slidesPerView: 1,
+    spaceBetween: 16,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: { el: ".swiper-pagination", clickable: true },
+    a11y: { enabled: true },
+  });
+})();
+
 // Footer year
 $("#year") && ($("#year").textContent = new Date().getFullYear());

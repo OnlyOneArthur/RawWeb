@@ -10,7 +10,14 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="/Plugin & Library Web Design ITCC 2025/boxicons v2.1.4/css/boxicons.min.css"
+    <link
+      rel="stylesheet"
+      href="/Plugin & Library Web Design ITCC 2025/boxicons v2.1.4/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./Plugin & Library Web Design ITCC 2025/swiperjs v11.1.5/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -82,370 +89,449 @@
       </nav>
     </header>
 
-    <main id="main">
-      <!-- Home -->
-      <section id="home-section" class="section active" tabindex="-1">
-        <div class="hero">
-          <h1 class="h1"><span id="typed-hero"></span></h1>
-          <p class="lead">
-            Next-generation cybersecurity solutions for individuals and
-            businesses.
-          </p>
-          <a href="#products" class="btn" data-section="products-section"
-            >Explore Products</a
-          >
-        </div>
-
-        <div class="why-us">
-          <h2 class="h2">Why Choose Us?</h2>
-          <div class="features">
-            <article class="feature card fade">
-              <div class="icon" aria-hidden="true"><i class="bx bx-shield"></i></div> <!--boxicons -->
-              <h3 class="h3">Ironclad Protection</h3>
-              <p>Advanced, real-time threat detection.</p>
-            </article>
-            <article class="feature card fade">
-              <div class="icon" aria-hidden="true"><i class="bx bx-laptop"></i></div> <!--boxicons -->
-
-              <h3 class="h3">Easy Integration</h3>
-              <p>Simple setup on all your devices.</p>
-            </article>
-            <article class="feature card fade">
-              <div class="icon" aria-hidden="true"><i class="bx bx-message-dots"></i></div> <!--boxicons -->
-
-              <h3 class="h3">24/7 Support</h3>
-              <p>Expert help whenever you need it.</p>
-            </article>
+    <!-- <main id="main"> -->
+    <div class="page-wrapper">
+      <main id="main" class="page-content">
+        <!-- Home -->
+        <section id="home-section" class="section active" tabindex="-1">
+          <div class="hero">
+            <h1 class="h1"><span id="typed-hero"></span></h1>
+            <p class="lead">
+              Next-generation cybersecurity solutions for individuals and
+              businesses.
+            </p>
+            <a href="#products" class="btn" data-section="products-section"
+              >Explore Products</a
+            >
           </div>
-        </div>
 
-        <!-- picture in why-us -->
-        <section class="quote-section">
-          <figure class="quote-block">
-            <img
-              src="asset/albert-enstein.jpg"
-              alt="Cybersecurity team working"
-              class="quote-img"
-            />
-            <blockquote>
-              <p>“I've use this products before.”</p>
-            </blockquote>
-            <figcaption>— albert enstein</figcaption>
-          </figure>
+          <section class="trust-strip" aria-label="Key metrics">
+            <ul class="trust-list" role="list">
+              <li class="trust-item">
+                <i class="bx bxs-check-shield"></i>
+                <span class="kpi">99.99%</span>
+                <span>Uptime</span>
+              </li>
+              <li class="trust-item">
+                <i class="bx bxs-devices"></i>
+                <span class="kpi">1.2M+</span>
+                <span>Devices</span>
+              </li>
+              <li class="trust-item">
+                <i class="bx bxs-flag-alt"></i><span class="kpi">85+</span
+                ><span>Countries</span>
+              </li>
+              <li class="trust-item">
+                <i class="bx bxs-headphone"></i><span class="kpi">24/7</span
+                ><span>Support</span>
+              </li>
+            </ul>
+          </section>
+
+          <div class="why-us">
+            <h2 class="h2">Why Choose Us?</h2>
+            <div class="features">
+              <article class="feature card fade">
+                <div class="icon" aria-hidden="true">
+                  <i class="bx bx-shield"></i>
+                </div>
+                <!--boxicons -->
+                <h3 class="h3">Ironclad Protection</h3>
+                <p>Advanced, real-time threat detection.</p>
+              </article>
+              <article class="feature card fade">
+                <div class="icon" aria-hidden="true">
+                  <i class="bx bx-laptop"></i>
+                </div>
+                <!--boxicons -->
+
+                <h3 class="h3">Easy Integration</h3>
+                <p>Simple setup on all your devices.</p>
+              </article>
+              <article class="feature card fade">
+                <div class="icon" aria-hidden="true">
+                  <i class="bx bx-message-dots"></i>
+                </div>
+                <!--boxicons -->
+
+                <h3 class="h3">24/7 Support</h3>
+                <p>Expert help whenever you need it.</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- picture in why-us -->
+          <section class="quote-section">
+            <figure class="quote-block">
+              <img
+                src="asset/albert-enstein.jpg"
+                alt="Cybersecurity team working"
+                class="quote-img"
+              />
+              <blockquote>
+                <p>“I've use this products before.”</p>
+              </blockquote>
+              <figcaption>— albert enstein</figcaption>
+            </figure>
+          </section>
+
+          <div class="featured-products">
+            <h2 class="h2">Featured Products</h2>
+            <div
+              class="products-grid"
+              id="featured-grid"
+              aria-live="polite"
+            ></div>
+          </div>
+
+          <section class="testimonials" aria-label="What customers say">
+            <h2 class="h2">Loved by security teams</h2>
+            <div class="swiper" id="t-swiper" aria-roledescription="carousel">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide card">
+                  <p>“AllSafe cut our incident response time in half.”</p>
+                  <div class="who"><strong>DevOps Lead</strong> — FinTech</div>
+                </div>
+                <div class="swiper-slide card">
+                  <p>“VPN + AV combo is simple to manage.”</p>
+                  <div class="who"><strong>IT Manager</strong> — EdTech</div>
+                </div>
+                <div class="swiper-slide card">
+                  <p>“Best support we’ve had—actual humans, 24/7.”</p>
+                  <div class="who">
+                    <strong>Security Analyst</strong> — Media
+                  </div>
+                </div>
+              </div>
+              <!-- Swiper controls -->
+              <div
+                class="swiper-button-prev"
+                aria-label="Previous testimonial"
+              ></div>
+              <div
+                class="swiper-button-next"
+                aria-label="Next testimonial"
+              ></div>
+              <div
+                class="swiper-pagination"
+                aria-label="Slide indicators"
+              ></div>
+            </div>
+          </section>
         </section>
 
-        <div class="featured-products">
-          <h2 class="h2">Featured Products</h2>
-          <div
-            class="products-grid"
-            id="featured-grid"
-            aria-live="polite"
-          ></div>
-        </div>
-      </section>
+        <!-- Products -->
+        <section id="products-section" class="section" tabindex="-1">
+          <div class="products-section">
+            <h2 class="h2">Our Products</h2>
 
-      <!-- Products -->
-      <section id="products-section" class="section" tabindex="-1">
-        <div class="products-section">
-          <h2 class="h2">Our Products</h2>
+            <div class="filter-sort">
+              <div class="filter">
+                <label for="category" class="label">Filter by Category:</label>
+                <select id="category" class="select">
+                  <option value="all">All</option>
+                  <option value="antivirus">Antivirus</option>
+                  <option value="vpn">VPN</option>
+                  <option value="firewall">Firewall</option>
+                  <option value="cloud">Cloud Security</option>
+                </select>
+              </div>
+              <div class="sort">
+                <label for="sort" class="label">Sort by:</label>
+                <select id="sort" class="select">
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="popularity">Popularity</option>
+                  <option value="newest">Newest</option>
+                </select>
+              </div>
+            </div>
 
-          <div class="filter-sort">
-            <div class="filter">
-              <label for="category" class="label">Filter by Category:</label>
-              <select id="category" class="select">
-                <option value="all">All</option>
-                <option value="antivirus">Antivirus</option>
-                <option value="vpn">VPN</option>
-                <option value="firewall">Firewall</option>
-                <option value="cloud">Cloud Security</option>
-              </select>
-            </div>
-            <div class="sort">
-              <label for="sort" class="label">Sort by:</label>
-              <select id="sort" class="select">
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="popularity">Popularity</option>
-                <option value="newest">Newest</option>
-              </select>
-            </div>
+            <div
+              class="products-grid"
+              id="products-grid"
+              aria-live="polite"
+            ></div>
           </div>
+        </section>
 
+        <!-- Product Detail -->
+        <section id="product-detail-section" class="section" tabindex="-1">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="#home" data-section="home-section" class="crumb">Home</a>
+            <span aria-hidden="true">›</span>
+            <a href="#products" data-section="products-section" class="crumb"
+              >Products</a
+            >
+            <span aria-hidden="true">›</span>
+            <span id="crumb-product">Details</span>
+          </nav>
+
+          <article
+            id="product-detail"
+            class="product-detail"
+            aria-busy="false"
+          ></article>
+        </section>
+
+        <!-- Purchase History -->
+        <section id="purchase-history-section" class="section" tabindex="-1">
+          <h2 class="h2">Purchase History</h2>
+          <div class="history-controls">
+            <input
+              id="history-search"
+              class="input"
+              type="search"
+              placeholder="Search by product…"
+              aria-label="Search purchases"
+            />
+            <select
+              id="history-sort"
+              class="select"
+              aria-label="Sort purchases"
+            >
+              <option value="date-new">Date: Newest</option>
+              <option value="date-old">Date: Oldest</option>
+              <option value="total-high">Total: High → Low</option>
+              <option value="total-low">Total: Low → High</option>
+            </select>
+          </div>
           <div
-            class="products-grid"
-            id="products-grid"
-            aria-live="polite"
-          ></div>
-        </div>
-      </section>
-
-      <!-- Product Detail -->
-      <section id="product-detail-section" class="section" tabindex="-1">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="#home" data-section="home-section" class="crumb">Home</a>
-          <span aria-hidden="true">›</span>
-          <a href="#products" data-section="products-section" class="crumb"
-            >Products</a
+            class="table-wrapper"
+            role="region"
+            aria-labelledby="history-caption"
           >
-          <span aria-hidden="true">›</span>
-          <span id="crumb-product">Details</span>
-        </nav>
+            <table class="table" id="history-table">
+              <caption id="history-caption" class="visually-hidden">
+                Past transactions
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody id="history-body"></tbody>
+            </table>
+          </div>
+          <p id="history-empty" class="muted" hidden>No purchases yet.</p>
+        </section>
 
-        <article
-          id="product-detail"
-          class="product-detail"
-          aria-busy="false"
-        ></article>
-      </section>
+        <!-- Placeholder “open auth” buttons -->
+        <section id="register-section" class="section" tabindex="-1">
+          <div class="card">
+            <p>
+              Registration is handled in a unified dialog.
+              <button
+                class="link btn-ghost"
+                class="link open-auth"
+                data-auth="register"
+              >
+                Open register
+              </button>
+            </p>
+          </div>
+        </section>
+        <section id="login-section" class="section" tabindex="-1">
+          <div class="card">
+            <p>
+              Login is handled in a unified dialog.
+              <button
+                class="link btn-ghost"
+                class="link open-auth"
+                data-auth="login"
+              >
+                Open login
+              </button>
+            </p>
+          </div>
+        </section>
 
-      <!-- Purchase History -->
-      <section id="purchase-history-section" class="section" tabindex="-1">
-        <h2 class="h2">Purchase History</h2>
-        <div class="history-controls">
-          <input
-            id="history-search"
-            class="input"
-            type="search"
-            placeholder="Search by product…"
-            aria-label="Search purchases"
-          />
-          <select id="history-sort" class="select" aria-label="Sort purchases">
-            <option value="date-new">Date: Newest</option>
-            <option value="date-old">Date: Oldest</option>
-            <option value="total-high">Total: High → Low</option>
-            <option value="total-low">Total: Low → High</option>
-          </select>
-        </div>
+        <!-- Auth Modal -->
         <div
-          class="table-wrapper"
-          role="region"
-          aria-labelledby="history-caption"
+          id="auth-modal"
+          class="modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="auth-title"
+          aria-hidden="true"
         >
-          <table class="table" id="history-table">
-            <caption id="history-caption" class="visually-hidden">
-              Past transactions
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Product</th>
-                <th scope="col">Date</th>
-                <th scope="col">Qty</th>
-                <th scope="col">Price</th>
-                <th scope="col">Total</th>
-              </tr>
-            </thead>
-            <tbody id="history-body"></tbody>
-          </table>
-        </div>
-        <p id="history-empty" class="muted" hidden>No purchases yet.</p>
-      </section>
-
-      <!-- Placeholder “open auth” buttons -->
-      <section id="register-section" class="section" tabindex="-1">
-        <div class="card">
-          <p>
-            Registration is handled in a unified dialog.
-            <button
-              class="link btn-ghost"
-              class="link open-auth"
-              data-auth="register"
-            >
-              Open register
+          <div class="modal-backdrop" data-close></div>
+          <div class="modal-dialog" role="document">
+            <button class="modal-close" aria-label="Close" data-close>
+              &times;
             </button>
-          </p>
-        </div>
-      </section>
-      <section id="login-section" class="section" tabindex="-1">
-        <div class="card">
-          <p>
-            Login is handled in a unified dialog.
-            <button
-              class="link btn-ghost"
-              class="link open-auth"
-              data-auth="login"
+            <h2 id="auth-title" class="h2">Account</h2>
+            <div role="tablist" aria-label="Authentication tabs" class="tabs">
+              <button
+                role="tab"
+                id="tab-login"
+                aria-controls="panel-login"
+                aria-selected="true"
+                class="tab"
+              >
+                Login
+              </button>
+              <button
+                role="tab"
+                id="tab-register"
+                aria-controls="panel-register"
+                aria-selected="false"
+                class="tab"
+              >
+                Register
+              </button>
+            </div>
+
+            <section
+              id="panel-login"
+              role="tabpanel"
+              aria-labelledby="tab-login"
+              class="tabpanel"
+              tabindex="0"
             >
-              Open login
-            </button>
-          </p>
-        </div>
-      </section>
-    </main>
+              <form id="login-form" class="auth-form" autocomplete="on">
+                <label class="visually-hidden" for="login-email">Email</label>
+                <input
+                  id="login-email"
+                  name="email"
+                  type="email"
+                  inputmode="email"
+                  placeholder="Email"
+                  required
+                />
+                <label class="visually-hidden" for="login-password"
+                  >Password</label
+                >
+                <input
+                  id="login-password"
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  required
+                />
+                <button type="submit" class="btn">Login</button>
+              </form>
+            </section>
 
-    <!-- Auth Modal -->
-    <div
-      id="auth-modal"
-      class="modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="auth-title"
-      aria-hidden="true"
-    >
-      <div class="modal-backdrop" data-close></div>
-      <div class="modal-dialog" role="document">
-        <button class="modal-close" aria-label="Close" data-close>
-          &times;
-        </button>
-        <h2 id="auth-title" class="h2">Account</h2>
-        <div role="tablist" aria-label="Authentication tabs" class="tabs">
-          <button
-            role="tab"
-            id="tab-login"
-            aria-controls="panel-login"
-            aria-selected="true"
-            class="tab"
-          >
-            Login
-          </button>
-          <button
-            role="tab"
-            id="tab-register"
-            aria-controls="panel-register"
-            aria-selected="false"
-            class="tab"
-          >
-            Register
-          </button>
-        </div>
-
-        <section
-          id="panel-login"
-          role="tabpanel"
-          aria-labelledby="tab-login"
-          class="tabpanel"
-          tabindex="0"
-        >
-          <form id="login-form" class="auth-form" autocomplete="on">
-            <label class="visually-hidden" for="login-email">Email</label>
-            <input
-              id="login-email"
-              name="email"
-              type="email"
-              inputmode="email"
-              placeholder="Email"
-              required
-            />
-            <label class="visually-hidden" for="login-password">Password</label>
-            <input
-              id="login-password"
-              name="password"
-              type="password"
-              placeholder="Password"
-              required
-            />
-            <button type="submit" class="btn">Login</button>
-          </form>
-        </section>
-
-        <section
-          id="panel-register"
-          role="tabpanel"
-          aria-labelledby="tab-register"
-          class="tabpanel hidden"
-          tabindex="0"
-        >
-          <form id="register-form" class="auth-form" autocomplete="on">
-            <label class="visually-hidden" for="reg-name">Full Name</label>
-            <input
-              id="reg-name"
-              name="name"
-              type="text"
-              placeholder="Full Name"
-              required
-            />
-            <label class="visually-hidden" for="reg-email">Email</label>
-            <input
-              id="reg-email"
-              name="email"
-              type="email"
-              inputmode="email"
-              placeholder="Email"
-              required
-            />
-            <label class="visually-hidden" for="reg-password">Password</label>
-            <input
-              id="reg-password"
-              name="password"
-              type="password"
-              placeholder="Password"
-              minlength="6"
-              required
-            />
-            <button type="submit" class="btn">Create Account</button>
-          </form>
-        </section>
-      </div>
-    </div>
-
-    <div
-      id="toast"
-      class="toast"
-      role="status"
-      aria-live="polite"
-      aria-atomic="true"
-    ></div>
-    <section class="mega-footer" aria-labelledby="mega-footer-heading">
-      <h2 id="mega-footer-heading" class="visually-hidden">Site Footer</h2>
-      <div class="footer-grid">
-        <div class="brand-col">
-          <div class="brand-row">
-            <img
-              src="asset/allsafe-high-resolution-logo-transparent.png"
-              alt="AllSafe"
-              width="120"
-              height="36"
-            />
+            <section
+              id="panel-register"
+              role="tabpanel"
+              aria-labelledby="tab-register"
+              class="tabpanel hidden"
+              tabindex="0"
+            >
+              <form id="register-form" class="auth-form" autocomplete="on">
+                <label class="visually-hidden" for="reg-name">Full Name</label>
+                <input
+                  id="reg-name"
+                  name="name"
+                  type="text"
+                  placeholder="Full Name"
+                  required
+                />
+                <label class="visually-hidden" for="reg-email">Email</label>
+                <input
+                  id="reg-email"
+                  name="email"
+                  type="email"
+                  inputmode="email"
+                  placeholder="Email"
+                  required
+                />
+                <label class="visually-hidden" for="reg-password"
+                  >Password</label
+                >
+                <input
+                  id="reg-password"
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  minlength="6"
+                  required
+                />
+                <button type="submit" class="btn">Create Account</button>
+              </form>
+            </section>
           </div>
-          <address class="addr muted">Corporate Headquarters<br /></address>
         </div>
 
-        <nav class="footer-col" aria-label="Products">
-          <h3 class="footer-title">Products</h3>
-          <ul class="footer-list">
-            <li><a href="#">AllSafe Antivirus Pro</a></li>
-            <li><a href="#">AllSafe VPN</a></li>
-            <li><a href="#">AllSafe Firewall</a></li>
-            <li><a href="#">AllSafe Cloud Guard</a></li>
-          </ul>
-        </nav>
+        <div
+          id="toast"
+          class="toast"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        ></div>
+      </main>
+      <section class="mega-footer" aria-labelledby="mega-footer-heading">
+        <h2 id="mega-footer-heading" class="visually-hidden">Site Footer</h2>
+        <div class="footer-grid">
+          <div class="brand-col">
+            <div class="brand-row">
+              <img
+                src="asset/allsafe-high-resolution-logo-transparent.png"
+                alt="AllSafe"
+                width="120"
+                height="36"
+              />
+            </div>
+            <address class="addr muted">Corporate Headquarters<br /></address>
+          </div>
 
-        <nav class="footer-col" aria-label="Features">
-          <h3 class="footer-title">Features</h3>
-          <ul class="footer-list">
-            <li><a href="#">Smart Threat AI</a></li>
-            <li><a href="#">Scam Detector</a></li>
-            <li><a href="#">Deepfake Detector</a></li>
-            <li><a href="#">Credit Monitoring</a></li>
-          </ul>
-        </nav>
+          <nav class="footer-col" aria-label="Products">
+            <h3 class="footer-title">Products</h3>
+            <ul class="footer-list">
+              <li><a href="#">AllSafe Antivirus Pro</a></li>
+              <li><a href="#">AllSafe VPN</a></li>
+              <li><a href="#">AllSafe Firewall</a></li>
+              <li><a href="#">AllSafe Cloud Guard</a></li>
+            </ul>
+          </nav>
 
-        <nav class="footer-col" aria-label="Resources">
-          <h3 class="footer-title">Resources</h3>
-          <ul class="footer-list">
-            <li><a href="#">Security Hub</a></li>
-            <li><a href="#">Product News</a></li>
-            <li><a href="#">About Deepfakes</a></li>
-            <li><a href="#">Blogs</a></li>
-          </ul>
-        </nav>
+          <nav class="footer-col" aria-label="Features">
+            <h3 class="footer-title">Features</h3>
+            <ul class="footer-list">
+              <li><a href="#">Smart Threat AI</a></li>
+              <li><a href="#">Scam Detector</a></li>
+              <li><a href="#">Deepfake Detector</a></li>
+              <li><a href="#">Credit Monitoring</a></li>
+            </ul>
+          </nav>
 
-        <nav class="footer-col" aria-label="Support">
-          <h3 class="footer-title">Support</h3>
-          <ul class="footer-list">
-            <li><a href="#">Customer Service</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Report a Scam</a></li>
-            <li><a href="#">Report Phishing</a></li>
-          </ul>
-        </nav>
-      </div>
-    </section>
+          <nav class="footer-col" aria-label="Resources">
+            <h3 class="footer-title">Resources</h3>
+            <ul class="footer-list">
+              <li><a href="#">Security Hub</a></li>
+              <li><a href="#">Product News</a></li>
+              <li><a href="#">About Deepfakes</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </nav>
 
-    <footer class="footer">
-      <small>© <span id="year"></span> AllSafe. All rights reserved.</small>
-    </footer>
+          <nav class="footer-col" aria-label="Support">
+            <h3 class="footer-title">Support</h3>
+            <ul class="footer-list">
+              <li><a href="#">Customer Service</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Report a Scam</a></li>
+              <li><a href="#">Report Phishing</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
 
-    <script src="/Plugin & Library Web Design ITCC 2025/typed.js v2.1.0/dist/typed.umd.js"></script>
+      <footer class="footer">
+        <small>© <span id="year"></span> AllSafe. All rights reserved.</small>
+      </footer>
 
-    <script src="script.js"></script>
+      <script src="/Plugin & Library Web Design ITCC 2025/typed.js v2.1.0/dist/typed.umd.js"></script>
+      <script src="./Plugin & Library Web Design ITCC 2025/swiperjs v11.1.5/swiper-bundle.min.js"></script>
+
+      <script src="script.js"></script>
+    </div>
   </body>
 </html>
