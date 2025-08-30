@@ -57,28 +57,28 @@ const PRODUCTS = [
     name: "AllSafe Antivirus Pro",
     cat: "antivirus",
     price: 39,
-    image: "https://via.placeholder.com/640x480?text=Antivirus",
+    image: "/asset/antivirus-image.png",
   },
   {
     id: "vpn-1",
     name: "AllSafe VPN",
     cat: "vpn",
     price: 49,
-    image: "https://via.placeholder.com/640x480?text=VPN",
+    image: "/asset/vpn-image.jpg",
   },
   {
     id: "fw-1",
     name: "AllSafe Firewall",
     cat: "firewall",
     price: 59,
-    image: "https://via.placeholder.com/640x480?text=Firewall",
+    image: "/asset/firewall-image.jpg",
   },
   {
     id: "cl-1",
     name: "AllSafe Cloud Guard",
     cat: "cloud",
     price: 79,
-    image: "https://via.placeholder.com/640x480?text=Cloud+Security",
+    image: "/asset/cloud.png",
   },
 ];
 
@@ -350,6 +350,21 @@ function showToast(msg) {
     toast.style.opacity = 0;
     toast.style.transform = "translateY(6px)";
   }, 2400);
+}
+
+if (document.querySelector("#typed-hero")) {
+  new Typed("#typed-hero", {
+    strings: [
+      "Your Digital Shield",
+      "Next-gen Protection",
+      "Stay Safe. Stay AllSafe",
+    ],
+    typeSpeed: 50, // typing speed in ms
+    backSpeed: 30, // backspacing speed in ms
+    backDelay: 1200, // pause before backspacing
+    loop: true, // repeat forever
+    smartBackspace: true, // only erase what's necessary
+  });
 }
 
 // Footer year

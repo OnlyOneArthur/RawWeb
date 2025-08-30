@@ -1,7 +1,7 @@
 :root {
   --teal-900: #003135; /* Deep background */
   --teal-800: #024950; /* Navbar and surface */
-  --cyan-400: #0fa4af; /* Primary accent (buttons, highlights) */
+  --cyan-400: #b3b4bd; /* Primary accent (buttons, highlights) */
   --mist-100: #afdde5; /* Light accent */
   --copper-600: #964734; /* Secondary accent */
   --bg: var(--teal-900);
