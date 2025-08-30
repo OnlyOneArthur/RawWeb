@@ -78,7 +78,7 @@ const PRODUCTS = [
     name: "AllSafe Cloud Guard",
     cat: "cloud",
     price: 79,
-    image: "/asset/cloud.png",
+    image: "/asset/cloud-image.jpg",
   },
 ];
 
