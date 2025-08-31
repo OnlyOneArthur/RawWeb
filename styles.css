@@ -847,3 +847,10 @@ body {
 .site-footer {
   margin-top: auto;
 }
+/*history-products gap*/
+.history-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
