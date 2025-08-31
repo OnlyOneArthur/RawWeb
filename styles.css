@@ -324,7 +324,7 @@ a {
   text-align: center;
   background:
     linear-gradient(rgba(37, 37, 35, 0.86), rgba(37, 37, 35, 0.86)),
-    url("https://via.placeholder.com/1600x900?text=AllSafe");
+    url("./asset/cyber-image2.jpg");
   background-size: cover;
   background-position: center;
   border-radius: var(--radius);
